@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+  background-image: linear-gradient(#9FE2BF, #AFEA5D);
+
+}
+
+/* Header/logo Title */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+      background-color: #111;
+    }
+
+.navbar {
+  z-index: 2; /* Certifique-se de que o z-index da barra de navegação seja maior que o do carrossel */
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.carousel {
+  max-width: 90%; /* Ajuste conforme necessário para manter a responsividade */
+  background-color: white; /* Adicionando um fundo branco */
+  padding: 20px; /* Adicionando um espaçamento interno ao carousel */
+  border-radius: 20px; /* Adicionando bordas arredondadas */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adicionando uma sombra sutil */
+}
+
+/* ... Outro estilo existente ... */
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {
+  flex: 70%;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 30px;
+  text-align: center;
+}
+
+.flex-item-left {
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 15px;
+  flex: 50%;
+  text-align: justify;
+  border-radius: 20px;
+  border: 3px solid black;
+
+}
+
+.flex-item-right {
+  background-color: ;
+  padding: 10px;
+  flex: 50%;
+  text-align: justify;
+}
+
+
+/* Footer */
+.footer {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between; /* Para espaçar as divs horizontalmente */
+  align-items: baseline; /* Para alinhar as divs verticalmente */
+  background: #ddd;
+}
+
+.integrantes {
+  text-align: left;
+}
+
+.integrantes2 {
+  text-align: right;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+/* Tela menor que 700px de largura */
+@media screen and (min-width: 701px) and (max-width: 768px) {
+  .carousel {
+    max-width: 90%; /* Ajuste conforme necessário para manter a responsividade */
+  }
+
+  .flex-item-left,
+  .flex-item-right {
+    flex: 100%; /* Ocupar toda a largura em telas de resolução intermediária */
+  }
+
+  .flex-item-right iframe {
+    width: 100%; /* Tornar o vídeo responsivo */
+  }
+
+  .speech {
+    left: 0; /* Alinhar a caixa de fala à esquerda na tela de resolução intermediária */
+  }
+}
+}
+
+</style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+<ul>
+    <li><a class="active" href="home.html">Home</a></li>
+    <li><a href="more.html">More Information</a></li>
+    <li><a href="quiz.html">Quiz</a></li>
+    <li><a href="about.html">About Us</a></li>
+  </ul>
+</div>
+<!-- The flexible grid (content) -->
+<div class="row">
+  <div class="main">
+    <!-- Carousel Container -->
+      <div class="carousel-container">
+        <!-- Carousel -->
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+          <!-- Indicators/dots -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+          </div>
+
+          <!-- The slideshow/carousel -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <iframe width="1200" height="720" class="d-block" src="https://www.youtube.com/embed/Si2UR2gCq9M"></iframe>
+            </div>
+            <div class="carousel-item">
+              <iframe width="1200" height="720" class="d-block" src="https://www.youtube.com/embed/c6nYxq8Y8qM"></iframe>
+            </div>
+            <div class="carousel-item">
+              <iframe width="1200" height="720" class="d-block" src="https://www.youtube.com/embed/WIu2cyAIgQM"></iframe>
+            </div>
+            <div class="carousel-item">
+              <iframe width="1200" height="720" class="d-block" src="https://www.youtube.com/embed/fis26HvvDII"></iframe>
+            </div>
+          </div>
+
+          <!-- Left and right controls/icons -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+<div class="flex-container">
+  <div class="flex-item-left"><h2><strong>WHAT EXACTLY IS THE ANDROID?</strong></h2></br>
+      <h4>Android, developed by Google, stands as a dynamic and versatile mobile operating system. Powering a myriad of devices, from smartphones to tablets, Android offers a user-centric experience with its customizable interface. With an expansive app ecosystem through the Google Play Store, Android ensures a diverse range of applications for productivity, entertainment, and beyond. What sets Android apart is its adaptability, allowing users to tailor their devices to individual preferences. Regular updates bring new features and security enhancements, keeping Android at the forefront of mobile innovation. Embracing integration with Google services, Android provides a seamless digital experience across devices. In essence, Android is not just an operating system; it's a gateway to a connected, personalized, and ever-evolving mobile world.
+      </h4>
+    </div>
+  <div class="flex-item-right">
+      <iframe width="100%" height="440" src="https://www.youtube.com/embed/H_NARjw4yCM"></iframe>
+  </div>
+</div>
+
+<div class="flex-container">
+  <div class="flex-item-left"><h2><strong>HOW CAN I USE IT?</strong></h2></br>
+      <h4>Android, the versatile operating system, transforms daily life. Grab your Android-powered smartphone or tablet to embark on a journey through connectivity and productivity. Stay in touch with loved ones via messaging apps, explore social media for updates, and capture memorable moments with the impressive camera features. Dive into the world of entertainment by streaming movies, music, and games. Manage your schedule and productivity using productivity apps like Google Calendar and Google Drive. Whether you're navigating a new city with Google Maps, staying fit with fitness apps, or reading an e-book, Android seamlessly integrates into every facet of your routine, offering a world of convenience at your fingertips.
+      </h4>
+    </div>
+  <div class="flex-item-left">
+      <h2><strong>WHY SHOULD I USE IT?</strong></h2></br>
+      <h4>Unlock a world of possibilities by choosing Android for your mobile device. With a user-friendly interface and a vast array of applications available on the Google Play Store, Android provides unparalleled versatility. Enjoy seamless integration with Google services, ensuring a connected and cohesive digital experience.
+Stay ahead of the curve with regular updates, delivering the latest features and security enhancements. Android caters to diverse preferences and budgets, offering a range of devices to suit your needs. The platform's commitment to innovation means you'll always be at the forefront of technology.
+Experience enhanced productivity through intuitive multitasking and a suite of productivity tools. Join a vibrant community of Android users for support and knowledge-sharing. Opt for Android to align your mobile experience with your dynamic lifestyle, empowering yourself with choice and innovation.
+      </h4>
+  </div>
+</div>
+
+  </div>
+</div>
+<!-- Footer -->
+<div class="footer">
+  <div class="integrantes">
+      <h3>GROUP MEMBERS A3 INGLÊS</h3>
+      <h4>Daniel Rodrigues de França RA: 520115414<br>
+        Luiz Sergio Lorenzo Junior RA: 520114346<br>
+        Riquelme Campelo da Silva RA: 52018533<br>
+        Gabriel Francisco Zuza Domingues RA: 52218109<br>
+        Gustavo Varvello Nasser RA: 520116325<br>
+      </h4>
+    </div>
+    <div class="integrantes2">
+      <h3>GROUP MEMBERS A3 INGLÊS</h3>
+      <h4>Lucas dos Santos Vieira RA: 52115724<br>
+        Amabili Schayana Toledo Martins RA: 1292225149<br>
+        Thales Nunes Ferreira RA: 52014078<br>
+        Guilherme Leão da Silva RA: 52115881<br>
+        Lis Maciel RA: 125221102462<br>
+      </h4>
+    </div>
+</div>
+
+</body>
+</html>
